@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- this is the statement that says that all the characters in existance are supported on the website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- this statement means that the website would be supported on all the possible applcaitons -->
+    <link rel="stylesheet" href="quizApp.css">
+    <!-- this is the CSS style sheet that i have created and have attached to the application -->
+    <script defer src="quizLogic.js"></script>
+    <!-- this is the connection to the logic file that runs the backend of the quiz application  -->
+    <title>Daiwik's 276 Quiz App</title>
+    <!-- this is the title of the page, the one you see on the browser tab -->
+</head>
+
+<body>
+    <div class="quiz-container" id="quiz">
+        <!-- this is the container on the website that has the quiz as the main display -->
+        <div class="quiz-header">
+            <h1 class="header-txt" >Interactive Quiz</h1>
+            <!-- this is the header of the quix, it has a specific style that is created in the css -->
+        </div>
+        <div class="results-page hidden" style="text-align: center;">
+            <h2>You scored <span id="final-score-display"></span> / 5 </h2>
+
+            <!-- make a list of questions for the website -->
+            <!-- <ul>
+                <li>
+                    <h2>What is the primary muscle worked during a squat?</h2>
+                    <label for="d" id="d_text">Quadriceps</label>
+                </li>
+                <li>
+                    <h2>What is the importance of stretching before a workout?</h2>
+
+                    
+                    <label for="a" id="a_text">Prevent injury</label>
+                    
+                </li>
+                <li>
+                    <h2>Which exercise is effective for building strong abs?</h2>
+                    <label for="b" id="b_text">planks</label>
+                </li>
+                <li>
+                    <h2>What is the best time to do cardio exercises?</h2>
+                    <label for="c" id="c_text">Evening</label>
+                </li>
+                <li>
+                    <h2>Which exercise primarily targets the chest muscles?</h2>
+                    <label for="d" id="d_text">Bench Press</label>
+                </li>
+            </ul> -->
+        </div>
+        <div class="quiz-body" id="f1">
+            <h2 id="question">What is the primary muscle worked during a squat?</h2>
+            <ul>
+                <!-- make a list of questions for the website -->
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer " />
+                    <!-- this is a radio button that makes the botton that the user would click for the answer for the question -->
+                    <label for="a" id="a_text">Biceps</label>
+                    <!-- this is the lable for the button, the text that comes after the radio button -->
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer isCorrect" />
+                    <label for="b" id="b_text">Quadriceps</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer" />
+                    <label for="c" id="c_text">Hamstrings</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer" />
+                    <label for="d" id="d_text">Triceps</label>
+                </li>
+            </ul>
+        </div>
+        <div class="quiz-body hidden" id="f2">
+            <h2 id="question">Which exercise primarily targets the chest muscles?</h2>
+            <ul>
+                <!-- make a list of questions for the website -->
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer" />
+                    <!-- this is a radio button that makes the botton that the user would click for the answer for the question -->
+                    <label for="a" id="a_text">Deadlift</label>
+                    <!-- this is the lable for the button, the text that comes after the radio button -->
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer isCorrect" />
+                    <label for="b" id="b_text">Bench Press</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer" />
+                    <label for="c" id="c_text">Row</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer" />
+                    <label for="d" id="d_text">Pull-up</label>
+                </li>
+            </ul>
+        </div>
+        <div class="quiz-body hidden" id="f3">
+            <h2 id="question">What is the best excercise for muscle synergy?</h2>
+            <ul>
+                <!-- make a list of questions for the website -->
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer" />
+                    <!-- this is a radio button that makes the botton that the user would click for the answer for the question -->
+                    <label for="a" id="a_text">Machine Leg Press</label>
+                    <!-- this is the lable for the button, the text that comes after the radio button -->
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer" />
+                    <label for="b" id="b_text">Cable Flys</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer isCorrect" />
+                    <label for="c" id="c_text">Dumble Shoulder Press</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer" />
+                    <label for="d" id="d_text">Lateral Pulldowns</label>
+                </li>
+            </ul>
+        </div>
+        <div class="quiz-body hidden" id="f4">
+            <h2 id="question">Which exercise is effective for building strong abs?</h2>
+            <ul>
+                <!-- make a list of questions for the website -->
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer" />
+                    <!-- this is a radio button that makes the botton that the user would click for the answer for the question -->
+                    <label for="a" id="a_text">Squats</label>
+                    <!-- this is the lable for the button, the text that comes after the radio button -->
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer isCorrect" />
+                    <label for="b" id="b_text">Planks</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer" />
+                    <label for="c" id="c_text">Lunges</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer" />
+                    <label for="d" id="d_text">Deadlifts</label>
+                </li>
+            </ul>
+        </div>
+        <div class="quiz-body hidden" id="f5">
+            <h2 id="question">What is the importance of stretching before a workout?</h2>
+            <ul>
+                <!-- make a list of questions for the website -->
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer" />
+                    <!-- this is a radio button that makes the botton that the user would click for the answer for the question -->
+                    <label for="a" id="a_text">Increase strength</label>
+                    <!-- this is the lable for the button, the text that comes after the radio button -->
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer" />
+                    <label for="b" id="b_text">Reduce flexibility</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer isCorrect" />
+                    <label for="c" id="c_text">Prevent injury</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer" />
+                    <label for="d" id="d_text">Gain weight</label>
+                </li>
+            </ul>
+
+        </div>
+        
+        <div class="quiz-footer">
+            <button type="button" id="prev-button">perv</button>
+            <button type="button" id="next-button">next</button>
+            <button type="button" id="submit-button">Submit</button>
+        </div>
+    </div>
+    <!-- <div class="quiz-footer">
+        <div class="quiz-details"></div>
+        <button type="button" id="btn">Submit</button>
+    </div> -->
+    <!-- this is the detail that is the question number, details that have the statements on the quiz -->
+    <!-- this is the next or submit button at the bottom of the q -->
+
+</body>
+</html>
